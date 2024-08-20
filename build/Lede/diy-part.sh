@@ -79,7 +79,7 @@ export Disable_53_redirection="0"            # 删除DNS强制重定向53端口�
 export Cancel_running="1"                    # 取消路由器每天跑分任务(个别源码本身不带此功能)(1为启用命令,填0为不作修改)
 
 # 更换argon主题版本
-rm -rf feeds/langge2/luci-theme-argon && git clone https://github.com/zh15933/lede_argon.git feeds/langge2/luci-theme-argon
+# rm -rf feeds/langge2/luci-theme-argon && git clone https://github.com/zh15933/lede_argon.git feeds/langge2/luci-theme-argon
 
 # 晶晨CPU系列打包固件设置(不懂请看说明)
 export amlogic_model="s905d"
