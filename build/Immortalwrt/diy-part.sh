@@ -89,6 +89,10 @@ sed -i 's/"带宽监控"/"监控"/g' `egrep "带宽监控" -rl ./`
 # 拉取mihomi(新clash插件)
 git clone https://github.com/morytyann/OpenWrt-mihomo.git package/xhh/OpenWrt-mihomo
 
+# 更换argon最新主题版本
+rm -rf feeds/langge2/luci-theme-argon && git clone https://github.com/jerrykuku/luci-theme-argon.git feeds/langge2/luci-theme-argon
+
+
 
 # 整理固件包时候,删除您不想要的固件或者文件,让它不需要上传到Actions空间(根据编译机型变化,自行调整删除名称)
 cat >"$CLEAR_PATH" <<-EOF
