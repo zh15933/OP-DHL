@@ -10,7 +10,7 @@ on:
       REPO_BRANCH:
         description: '天灵源码-请选择分支'
         required: true
-        default: 'openwrt-21.02'
+        default: 'openwrt-23.05'
         type: choice
         options:
           - 'openwrt-23.05'
@@ -39,7 +39,7 @@ on:
       INFORMATION_NOTICE:
         description: 'Telegram或pushplus信息通知'
         required: true
-        default: 'Telegram'
+        default: '关闭'
         type: choice
         options:
           - '关闭'
@@ -62,8 +62,8 @@ on:
         type: boolean
       CACHEWRTBUILD_SWITCH:
         description: '缓存加速编译'
-        required: false
-        default: 'false'
+        required: true
+        default: 'true'
         type: boolean
       UPDATE_FIRMWARE_ONLINE:
         description: '增加在线更新固件功能/自动打包Amlogic_Rockchip系列固件'
