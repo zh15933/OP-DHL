@@ -39,7 +39,7 @@ on:
       INFORMATION_NOTICE:
         description: 'Telegram或pushplus信息通知'
         required: true
-        default: '关闭'
+        default: 'Telegram'
         type: choice
         options:
           - '关闭'
@@ -62,8 +62,8 @@ on:
         type: boolean
       CACHEWRTBUILD_SWITCH:
         description: '缓存加速编译'
-        required: true
-        default: 'true'
+        required: false
+        default: 'false'
         type: boolean
       UPDATE_FIRMWARE_ONLINE:
         description: '增加在线更新固件功能/自动打包Amlogic_Rockchip系列固件'
@@ -78,8 +78,8 @@ on:
 
 
 # 定时触发开启开始编译(把下面两个#去掉开启,时间设置请看定时开启编译说明)
-  schedule:
-   - cron: 0 9 */5 * *
+#  schedule:
+#   - cron: 35 18 * * *
 
 env:
   GITHUB_LINK: https://github.com/${{github.repository}}
