@@ -97,7 +97,7 @@ sed -i 's/"带宽监控"/"监控"/g' `egrep "带宽监控" -rl ./`
 git clone https://github.com/morytyann/OpenWrt-mihomo.git package/xhh/OpenWrt-mihomo
 
 # 更换argon最新主题版本
-rm -rf feeds/langge2/luci-theme-argon && git clone https://github.com/jerrykuku/luci-theme-argon.git feeds/langge2/luci-theme-argon
+# rm -rf feeds/langge2/luci-theme-argon && git clone https://github.com/jerrykuku/luci-theme-argon.git feeds/langge2/luci-theme-argon
 
 
 
