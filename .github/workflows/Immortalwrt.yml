@@ -123,13 +123,13 @@ jobs:
     - name: 准备结束
       uses: actions/checkout@v4
       
-#    - name: 设置 GENE_PATH
-#      run: echo "GENE_PATH1=${GITHUB_WORKSPACE1}/openwrt/package/base-files/files/bin/config_generate" >> ${GITHUB_ENV}
+    - name: 设置 GENE_PATH
+      run: echo "GENE_PATH1=${GITHUB_WORKSPACE1}/openwrt/package/base-files/files/bin/config_generate" >> ${GITHUB_ENV}
 
     - name: 检测文件和对比上游版本
       run: |
         cd ${GITHUB_WORKSPACE}
-        bash <(curl -fsSL https://raw.githubusercontent.com/zh15933/common/main/custom/first.sh)
+        bash <(curl -fsSL https://raw.githubusercontent.com/shidahuilang/common/main/custom/first.sh)
         source ${GITHUB_WORKSPACE}/build/${{ env.FOLDER_NAME }}/settings.ini
         export INPUTS_REPO_BRANCH="${{ github.event.inputs.REPO_BRANCH }}"
         export INPUTS_CONFIG_FILE="${{ github.event.inputs.CONFIG_FILE }}"
