@@ -126,7 +126,7 @@ jobs:
 #    - name: 设置 GENE_PATH
 #      run: echo "GENE_PATH1=${GITHUB_WORKSPACE1}/openwrt/package/base-files/files/bin/config_generate" >> ${GITHUB_ENV}
 
-- name: 设置 GENE_PATH 环境变量
+    - name: 设置 GENE_PATH 环境变量
       run: |
        echo "GENE_PATH=${GITHUB_WORKSPACE}/openwrt/package/base-files/files/bin/config_generate" >> ${GITHUB_ENV}
        
