@@ -79,7 +79,7 @@ export Disable_53_redirection="0"            # 删除DNS强制重定向53端口�
 export Cancel_running="1"                    # 取消路由器每天跑分任务(个别源码本身不带此功能)(1为启用命令,填0为不作修改)
 
 # 拉取mihomi(新clash插件)
-git clone https://github.com/morytyann/OpenWrt-mihomo.git package/xhh/OpenWrt-mihomo
+# git clone https://github.com/morytyann/OpenWrt-mihomo.git package/xhh/OpenWrt-mihomo
 
 # 更换argon最新主题版本
 rm -rf feeds/langge2/luci-theme-argon && git clone https://github.com/jerrykuku/luci-theme-argon.git feeds/langge2/luci-theme-argon
