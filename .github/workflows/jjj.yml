@@ -1,4 +1,4 @@
-name: Immor
+name: 清理
 on:
   workflow_dispatch:
 
