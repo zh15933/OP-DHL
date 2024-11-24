@@ -122,9 +122,13 @@ jobs:
     
     - name: 准备结束
       uses: actions/checkout@v4
+<<<<<<< HEAD
       
 #    - name: 设置 GENE_PATH
 #      run: echo "GENE_PATH1=${GITHUB_WORKSPACE1}/openwrt/package/base-files/files/bin/config_generate" >> ${GITHUB_ENV}
+=======
+    
+>>>>>>> 27ce81a86eecf09511279a008cb7aa5aab4b447d
 
     - name: 设置 GENE_PATH 环境变量
       run: |
@@ -172,7 +176,12 @@ jobs:
         cd ${GITHUB_WORKSPACE}
         cd openwrt
         source ${BUILD_PATH}/common.sh && Diy_menu2
- 
+
+    - name: 设置 GENE_PATH 环境变量
+      run: |
+       echo "GENE_PATH=${GITHUB_WORKSPACE}/openwrt/package/base-files/files/bin/config_generate" >> ${GITHUB_ENV}
+
+
     - name: 更新插件源
       if: env.REPO_TOKEN
       run: |
