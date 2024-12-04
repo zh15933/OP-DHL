@@ -171,11 +171,6 @@ jobs:
       run: |
        echo "GENE_PATH=${GITHUB_WORKSPACE}/openwrt/package/base-files/files/bin/config_generate" >> ${GITHUB_ENV}
 
-    - name: 设置 GENE_PATH 环境变量
-      run: |
-       echo "GENE_PATH=${GITHUB_WORKSPACE}/openwrt/package/base-files/files/bin/config_generate" >> ${GITHUB_ENV}
-
-
     - name: 更新插件源
       if: env.REPO_TOKEN
       run: |
