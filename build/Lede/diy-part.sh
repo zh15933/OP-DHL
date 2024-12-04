@@ -67,6 +67,9 @@ export Disable_autosamba="1"                 # 去掉源码默认自选的luci-a
 # 手动更换默认主题
 # uci set luci.main.mediaurlbase='/luci-static/neobird' && uci commit luci
 
+ # 启动18.06Luci
+# sed -i 's@src-git luci@# src-git luci@g' feeds.conf.default
+
 # 更换argon最新主题版本
 rm -rf feeds/langge2/luci-theme-argon && git clone https://github.com/jerrykuku/luci-theme-argon.git feeds/langge2/luci-theme-argon
 
