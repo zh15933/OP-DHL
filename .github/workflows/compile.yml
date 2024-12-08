@@ -101,9 +101,9 @@ jobs:
         cp -Rf ${GITHUB_WORKSPACE}/build ${GITHUB_WORKSPACE}/openwrt/build
         chmod -R +x ${GITHUB_WORKSPACE}/openwrt/build
 
-#    - name: 设置 GENE_PATH 环境变量
-#      run: |
-#       echo "GENE_PATH=${GITHUB_WORKSPACE}/openwrt/package/base-files/files/bin/config_generate" >> ${GITHUB_ENV}
+    - name: 设置 GENE_PATH 环境变量
+      run: |
+       echo "GENE_PATH=${GITHUB_WORKSPACE}/openwrt/package/base-files/files/bin/config_generate" >> ${GITHUB_ENV}
     
     - name: 公 告
       run: |
