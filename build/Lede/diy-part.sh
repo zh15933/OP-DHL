@@ -71,7 +71,7 @@ export Disable_autosamba="1"                 # 去掉源码默认自选的luci-a
 # sed -i 's@src-git luci@# src-git luci@g' feeds.conf.default
 
 # 更换argon最新主题版本
-rm -rf feeds/langge2/luci-theme-argon && git clone https://github.com/jerrykuku/luci-theme-argon.git feeds/langge2/luci-theme-argon
+# rm -rf feeds/langge2/luci-theme-argon && git clone https://github.com/jerrykuku/luci-theme-argon.git feeds/langge2/luci-theme-argon
 
 #rm -rf feeds/packages/lang/golang
 #git clone https://github.com/sbwml/packages_lang_golang -b 21.x feeds/packages/lang/golang
