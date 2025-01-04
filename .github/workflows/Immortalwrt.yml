@@ -39,7 +39,7 @@ on:
       INFORMATION_NOTICE:
         description: 'Telegram或pushplus信息通知'
         required: true
-        default: '关闭'
+        default: 'Telegram'
         type: choice
         options:
           - '关闭'
@@ -79,7 +79,7 @@ on:
 
 # 定时触发开启开始编译(把下面两个#去掉开启,时间设置请看定时开启编译说明)
 #  schedule:
-#   - cron: 0 9 */5 * *
+#   - cron: 35 18 * * *
 
 env:
   GITHUB_LINK: https://github.com/${{github.repository}}
@@ -167,12 +167,6 @@ jobs:
         cd openwrt
         source ${BUILD_PATH}/common.sh && Diy_menu2
 
-<<<<<<< HEAD
-    - name: 设置 GENE_PATH 环境变量
-      run: |
-       echo "GENE_PATH=${GITHUB_WORKSPACE}/openwrt/package/base-files/files/bin/config_generate" >> ${GITHUB_ENV}
-=======
->>>>>>> d865cb6cf1fb115ca5df52304494123906a7ee35
 
     - name: 更新插件源
       if: env.REPO_TOKEN
