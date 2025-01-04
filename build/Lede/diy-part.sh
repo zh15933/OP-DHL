@@ -66,6 +66,7 @@ export Disable_autosamba="1"                 # 去掉源码默认自选的luci-a
 
 # 手动更换默认主题
 # uci set luci.main.mediaurlbase='/luci-static/neobird' && uci commit luci
+<<<<<<< HEAD
 
  # 启动18.06Luci
 # sed -i 's@src-git luci@# src-git luci@g' feeds.conf.default
@@ -75,6 +76,10 @@ rm -rf feeds/langge2/luci-theme-argon && git clone https://github.com/jerrykuku/
 
 # x86 型号只显示 CPU 型号
 sed -i 's/${g}.*/${a}${b}${c}${d}${e}${f}${hydrid}/g' package/lean/autocore/files/x86/autocore
+=======
+#sed -i 's@src-git luci@# src-git luci@g' feeds.conf.default
+#sed -i 's@## src-git luci@src-git luci@g' feeds.conf.default
+>>>>>>> d865cb6cf1fb115ca5df52304494123906a7ee35
 
 #rm -rf feeds/packages/lang/golang
 #git clone https://github.com/sbwml/packages_lang_golang -b 21.x feeds/packages/lang/golang
