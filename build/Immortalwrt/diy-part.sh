@@ -79,7 +79,8 @@ export kernel_usage="stable"
 # 更换argon最新主题版本
 rm -rf feeds/langge2/luci-theme-argon && git clone https://github.com/jerrykuku/luci-theme-argon.git feeds/langge2/luci-theme-argon
 
-
+#删除并替换 feeds/packages/lang/golang 版本
+git clone https://github.com/sbwml/packages_lang_golang -b 23.x feeds/packages/lang/golang
 
 # 修改插件名字
 sed -i 's/"终端"/"TTYD"/g' `egrep "终端" -rl ./`
