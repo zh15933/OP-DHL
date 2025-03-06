@@ -74,7 +74,7 @@ export rootfs_size="2560"
 export kernel_usage="stable"
 
 # 拉取mihomi(新clash插件)
- git clone https://github.com/nikkinikki-org/OpenWrt-nikki.git package/xhh/OpenWrt-nikki
+git clone https://github.com/nikkinikki-org/OpenWrt-nikki.git package/xhh/OpenWrt-nikki
 
 # 更换argon最新主题版本
 rm -rf feeds/langge2/luci-theme-argon && git clone https://github.com/jerrykuku/luci-theme-argon.git feeds/langge2/luci-theme-argon
