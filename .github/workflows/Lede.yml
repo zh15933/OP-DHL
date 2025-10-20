@@ -20,7 +20,30 @@ on:
         default: 'x86_64'
         type: choice
         options:
+          - 'aarch64'
+          - 'asus_rt-acrh17'
+          - 'newifi-d1'
+          - 'newifi-d2'
+          - 'p2w_r619ac-128m'
+          - 'phicomm_k2p'
+          - 'x86_32'
           - 'x86_64'
+          - 'r2c'
+          - 'r2s'
+          - 'r3s'       
+          - 'r4s'
+          - 'r4se'
+          - 'r5s'
+          - 'r5c'          
+          - 'xiaomi_mi-router-4a-gigabit'
+          - 'xiaomi_redmi-router-ac2100'
+          - 'xiaomi_redmi-router-ax6s'
+          - 'xiaoyu_xy-c5'
+          - 'ax3600'
+          - 'xiaomi_mi-router-3g'
+          - 'r68s'
+          - 'r6s'
+          - 'n1'
       CPU_SELECTION:
         description: 'CPU优选,增加编译速度'
         required: true
@@ -37,7 +60,7 @@ on:
         default: '关闭'
         type: choice
         options:
-          - '关闭'
+          - 'Telegram'
           - 'Telegram'
           - 'Pushplus'
           - 'Wechat'
@@ -200,6 +223,7 @@ jobs:
       env:
         TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+        
 
     - name: 生成"${{ matrix.target }}"配置文件
       if: env.REPO_TOKEN
@@ -225,7 +249,7 @@ jobs:
     - name: 清理Actions空间
       continue-on-error: true
       if: env.REPO_TOKEN
-      uses: small-5/delete-workflow-runs@main
+      uses: Mattraks/delete-workflow-runs@v2
       with:
         token: ${{ secrets.REPO_TOKEN }}
         repository: ${{ github.repository }}
