@@ -13,7 +13,6 @@ on:
         default: 'openwrt-23.05'
         type: choice
         options:
-          - 'openwrt-24.10'
           - 'openwrt-23.05'
           - 'openwrt-24.10'           
           - 'openwrt-21.02'
@@ -27,7 +26,7 @@ on:
         type: choice
         options:
           - 'x86_64'
-          - 'x86_64_24'
+          - 'aarch64'
       CPU_SELECTION:
         description: 'CPU优选,增加编译速度'
         required: true
@@ -41,7 +40,7 @@ on:
       INFORMATION_NOTICE:
         description: 'Telegram或pushplus信息通知'
         required: true
-        default: '关闭'
+        default: 'Telegram'
         type: choice
         options:
           - '关闭'
@@ -65,7 +64,7 @@ on:
       CACHEWRTBUILD_SWITCH:
         description: '缓存加速编译'
         required: false
-        default: 'true'
+        default: 'false'
         type: boolean
       UPDATE_FIRMWARE_ONLINE:
         description: '增加在线更新固件功能/自动打包Amlogic_Rockchip系列固件'
@@ -80,8 +79,8 @@ on:
 
 
 # 定时触发开启开始编译(把下面两个#去掉开启,时间设置请看定时开启编译说明)
-  schedule:
-   - cron: 0 9 */5 * *
+#  schedule:
+#   - cron: 35 18 * * *
 
 env:
   GITHUB_LINK: https://github.com/${{github.repository}}
@@ -192,12 +191,9 @@ jobs:
         cd openwrt
         source ${BUILD_PATH}/common.sh && Diy_menu5
     
-    - name: SSH远程连接服务器
-      uses: db-one/debugger-action@main
-      if: env.SSH_ACTIONS == 'true' || (github.event.inputs.SSH_ACTION == 'true')
-      env:
-        TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-        TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+    - name: SSH远程连接（make menuconfig）
+      if: env.SSH_ACTION == 'true'
+      uses: danshui-git/debugger-action@main
 
     - name: 生成"${{ matrix.target }}"配置文件
       if: env.REPO_TOKEN
