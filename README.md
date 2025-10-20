@@ -11,7 +11,6 @@
 
 - TG通知```Settings```->```Secrets```中添加个名字为```TELEGRAM_BOT_TOKEN```和```TELEGRAM_CHAT_ID```
 
-[![Stargazers over time](https://starchart.cc/shidahuilang/openwrt.svg)](https://starchart.cc/shidahuilang/openwrt)
  ### 鸣谢！
  感谢以下各位大佬（排名无分先后）<br />
 [`coolsnowwolf`]
