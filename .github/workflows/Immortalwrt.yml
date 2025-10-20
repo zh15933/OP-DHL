@@ -10,11 +10,11 @@ on:
       REPO_BRANCH:
         description: '天灵源码-请选择分支'
         required: true
-        default: 'openwrt-23.05'
+        default: 'openwrt-24.10'
         type: choice
         options:
           - 'openwrt-23.05'
-          - 'openwrt-24.10'           
+          - 'openwrt-24.10'
           - 'openwrt-21.02'
           - 'openwrt-18.06'
           - 'openwrt-18.06-k5.4'
@@ -40,7 +40,7 @@ on:
       INFORMATION_NOTICE:
         description: 'Telegram或pushplus信息通知'
         required: true
-        default: 'Telegram'
+        default: '关闭'
         type: choice
         options:
           - '关闭'
